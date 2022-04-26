@@ -4,10 +4,10 @@ import HeroBanner from "./hero_banner";
 
 function Header() {
   return (
-    <div>
+    <header>
       <NavBar />
       <HeroBanner />
-    </div>
+    </header>
   );
 }
 

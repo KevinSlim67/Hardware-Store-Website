@@ -1,7 +1,17 @@
+html {
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 .App {
@@ -15,13 +25,14 @@
   max-width: 1366px;
 }
 
+
 //NavBar --------------------------------------
 .hamburger-btn {
   display: none;
 }
 
 .search-bar {
-  background-image: url('../public/assets/images/icons/search_light.png');
+  background-image: url("../public/assets/images/icons/search_light.png");
   background-position: 1rem;
   background-repeat: no-repeat;
   padding-left: 3.5rem;
@@ -69,14 +80,47 @@
   }
 
   .hero-text {
-    font-size: 2.4rem;
+    font-size: 30px;
     margin: 0 5rem;
+    padding: 4.5rem;
   }
 }
 
 @media (min-width: 1100px) {
   .hero-text {
-    font-size: 2.70rem;
+    font-size: 2.7rem;
+  }
+}
+//----------------------------------------------------------
+
+//Main Layout-----------------------------------------------
+.main-layout {
+  margin: 2rem;
+}
+
+@media (max-width: 600px) {
+  .main-layout {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+//----------------------------------------------------------
+
+//About Us Section------------------------------------------
+@media (max-width: 900px) {
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us-image {
+    order: 2;
+    width: 80%;
+  }
+
+  .about-us-text {
+    order: 1;
+    width: auto;
   }
 }
 //----------------------------------------------------------
