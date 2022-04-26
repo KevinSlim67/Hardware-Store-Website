@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.Layout {
+  position: fixed;
+  width: 100%;
+  max-width: 1366px;
+}
+
+//NavBar --------------------------------------
+
+.hamburger-btn {
+  display: none;
+}
+
+.search-bar {
+  background-image: url('../public/assets/images/icons/search_light.png');
+  background-position: 1rem;
+  background-repeat: no-repeat;
+  padding-left: 3.5rem;
+}
+
+@media (max-width: 1000px) {
+  .navbar-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .navbar-pages {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 470px) {
+  .navbar-content {
+    justify-content: space-between;
+    width: 80%;
+  }
+  .search-bar {
+    display: none;
+  }
+}
+
+//----------------------------------------------------------
