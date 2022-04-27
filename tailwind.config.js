@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
+          50: '#F5F6FF',
           100: '#EEEEFF',
           200: '#DDDEFF',
           400: '#BCBEFD',
@@ -18,6 +19,7 @@ module.exports = {
         secondary: '#F8F8FF',
 
         accent: {
+          200: '#00edc5',
           400: '#00C9A7',
           600: '#00957C',
           800: '#205F52',

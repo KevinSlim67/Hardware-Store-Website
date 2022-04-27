@@ -23,6 +23,7 @@ html {
   position: relative;
   width: 100%;
   max-width: 1366px;
+  
 }
 
 
@@ -70,6 +71,7 @@ html {
   letter-spacing: -0.1rem;
 }
 
+
 @media (max-width: 900px) {
   .hero-header {
     justify-content: center;
@@ -94,14 +96,14 @@ html {
 //----------------------------------------------------------
 
 //Main Layout-----------------------------------------------
-.main-layout {
-  margin: 2rem;
+.main-layout > section {
+  padding: 2rem 0;
 }
 
 @media (max-width: 600px) {
-  .main-layout {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+  .main-layout > section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 //----------------------------------------------------------
@@ -116,6 +118,7 @@ html {
   .about-us-image {
     order: 2;
     width: 80%;
+    padding: 0;
   }
 
   .about-us-text {
@@ -123,4 +126,13 @@ html {
     width: auto;
   }
 }
+//----------------------------------------------------------
+
+//Latest Offers Section-------------------------------------
+@media (max-width: 500px) {
+  .product-category {
+    margin: 0 1rem;
+  }
+}
+
 //----------------------------------------------------------
