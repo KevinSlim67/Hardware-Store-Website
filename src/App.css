@@ -4,7 +4,8 @@ html {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -16,19 +17,20 @@ html {
 }
 
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .Layout {
   position: relative;
   width: 100%;
   max-width: 1366px;
-  
 }
 
-
-//NavBar --------------------------------------
 .hamburger-btn {
   display: none;
 }
@@ -50,7 +52,6 @@ html {
   .navbar-pages {
     display: none;
   }
-
   .hamburger-btn {
     display: block;
   }
@@ -58,30 +59,29 @@ html {
 
 @media (max-width: 470px) {
   .navbar-content {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 80%;
   }
   .search-bar {
     display: none;
   }
 }
-//----------------------------------------------------------
 
-//Hero Header-----------------------------------------------
 .hero-text {
   letter-spacing: -0.1rem;
 }
 
-
 @media (max-width: 900px) {
   .hero-header {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   .hero-image {
     display: none;
   }
-
   .hero-text {
     font-size: 30px;
     margin: 0 5rem;
@@ -94,9 +94,7 @@ html {
     font-size: 2.7rem;
   }
 }
-//----------------------------------------------------------
 
-//Main Layout-----------------------------------------------
 .main-layout > section {
   padding: 2rem 0;
 }
@@ -107,47 +105,54 @@ html {
     padding-right: 0.5rem;
   }
 }
-//----------------------------------------------------------
 
-//About Us Section------------------------------------------
 @media (max-width: 900px) {
   .about-us {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .about-us-image {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: 80%;
     padding: 0;
   }
-
   .about-us-text {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: auto;
   }
 }
-//----------------------------------------------------------
 
-//Latest Offers Section-------------------------------------
 @media (max-width: 500px) {
   .product-category {
     margin: 0 1rem;
   }
 }
-//----------------------------------------------------------
 
-//Footer Section--------------------------------------------
 @media (max-width: 850px) {
   .footer-layout {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .footer-section {
     width: 100%;
     margin: 3rem 0;
   }
 }
-//Latest Offers Section-------------------------------------
+/*# sourceMappingURL=App.css.map */

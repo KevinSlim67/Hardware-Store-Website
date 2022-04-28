@@ -3,6 +3,7 @@ import AboutUs from "./about_us";
 import NavBar from "../navbar/navbar";
 import Header from "./header";
 import LatestOffers from "./latest_offers/latest_offers";
+import Footer from "../footer/footer";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
         <AboutUs />
         <LatestOffers />
       </div>
+      <Footer />
     </div>
   );
 }

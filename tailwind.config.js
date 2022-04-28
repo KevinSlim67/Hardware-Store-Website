@@ -8,6 +8,7 @@ module.exports = {
         primary: {
           50: '#F5F6FF',
           100: '#EEEEFF',
+          150: '#dddef3',
           200: '#DDDEFF',
           400: '#BCBEFD',
           600: '#31347B',

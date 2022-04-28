@@ -16,7 +16,13 @@ function AboutUs() {
       <div className="about-us-text w-[50%] ml-2 mr-2 text-primary-900 text-justify">
         <h3 className="text-primary-600 text-2xl mb-5">About Us</h3>
         <p>{paragraph}</p>
-        <Button className="mt-7 mb-4 p-4 pt-3 pb-3" text="Learn More" function="" />
+        <Button
+          className="mt-7 mb-4 p-4 pt-3 pb-3"
+          text="Learn More"
+          function={() => {
+            console.log("LearnMore");
+          }}
+        />
       </div>
     </section>
   );
