@@ -8,7 +8,7 @@ import Footer from "../components/footer/footer";
 function HomePage() {
   return (
     <div className="page">
-      <NavBar />
+      <NavBar selected="Home" />
       <Header />
       <div className="main-layout flex flex-col items-stretch">
         <AboutUs />
