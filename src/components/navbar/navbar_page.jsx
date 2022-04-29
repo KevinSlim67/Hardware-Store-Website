@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavBarPages(props) {
+function NavBarPage(props) {
 
   let textColor = 'text-primary-900'; //default color
   if (props.selected) {
@@ -17,4 +17,4 @@ function NavBarPages(props) {
   );
 }
 
-export default NavBarPages;
+export default NavBarPage;

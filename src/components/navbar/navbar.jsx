@@ -1,5 +1,5 @@
 import React from "react";
-import NavBarPages from "./navbar_pages";
+import NavBarPage from "./navbar_page";
 import SearchBar from "./search_bar";
 import HamburgerButton from "../buttons/hamburger";
 
@@ -13,10 +13,10 @@ function NavBar() {
         <div
           className="navbar-pages flex justify-center align-center text-primary-900 text-sm"
         >
-          <NavBarPages name="Home" dest="" selected={true} />
-          <NavBarPages name="Product" dest="" selected={false} />
-          <NavBarPages name="Support" dest="" selected={false} />
-          <NavBarPages name="Contact" dest="" selected={false}/>
+          <NavBarPage name="Home" dest="/home" selected={true} />
+          <NavBarPage name="Product" dest="/product" selected={false} />
+          <NavBarPage name="Support" dest="/support" selected={false} />
+          <NavBarPage name="Contact" dest="" selected={false}/>
         </div>
         <SearchBar />
         <HamburgerButton />

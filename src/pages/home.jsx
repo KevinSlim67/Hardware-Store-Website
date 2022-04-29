@@ -1,9 +1,9 @@
 import React from "react";
-import AboutUs from "./about_us";
-import NavBar from "../navbar/navbar";
-import Header from "./header";
-import LatestOffers from "./latest_offers/latest_offers";
-import Footer from "../footer/footer";
+import AboutUs from "../components/home/about_us";
+import NavBar from "../components/navbar/navbar";
+import Header from "../components/home/header";
+import LatestOffers from "../components/home/latest_offers/latest_offers";
+import Footer from "../components/footer/footer";
 
 function HomePage() {
   return (
