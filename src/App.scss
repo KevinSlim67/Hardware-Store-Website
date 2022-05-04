@@ -1,6 +1,9 @@
 html {
   font-size: 16px;
-  background-color: #dddef3;
+}
+
+body {
+  background-color: #f8f8ff;
 }
 
 * {
@@ -24,11 +27,9 @@ html {
   position: relative;
   width: 100%;
   max-width: 1366px;
-  
 }
 
-
-//NavBar --------------------------------------
+//NavBar---------------------------------------
 .hamburger-btn {
   display: none;
 }
@@ -71,7 +72,6 @@ html {
 .hero-text {
   letter-spacing: -0.1rem;
 }
-
 
 @media (max-width: 900px) {
   .hero-header {
@@ -151,3 +151,28 @@ html {
   }
 }
 //Latest Offers Section-------------------------------------
+
+//Product-Hero Section--------------------------------------
+.product-hero {
+  background-image: url("../public/assets/images/products/product_hero_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+//----------------------------------------------------------
+
+//Support-Hero Section--------------------------------------
+.support-hero {
+  background-image: linear-gradient(
+      262.31deg,
+      rgba(188, 190, 253, 0.38) 0%,
+      rgba(20, 23, 72, 0.55) 100%
+    ),
+    url("../public/assets/images/products/support_hero_image.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-shadow {
+  text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
+}

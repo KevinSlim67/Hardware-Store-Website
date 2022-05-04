@@ -1,11 +1,14 @@
 import React from "react";
+import Footer from "../components/footer/footer";
 import NavBar from "../components/navbar/navbar";
+import Header from "../components/product/header";
 
 function ProductPage() {
   return (
     <div>
       <NavBar selected="Product" />
-      This is the product page
+        <Header />
+      <Footer />
     </div>
   );
 }

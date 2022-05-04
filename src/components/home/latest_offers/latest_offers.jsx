@@ -6,22 +6,18 @@ const categories = [
   {
     name: "Laptops",
     function: "",
-    selected: true,
   },
   {
     name: "Smartphones",
     function: "",
-    selected: false,
   },
   {
     name: "Tablets",
     function: "",
-    selected: false,
   },
   {
     name: "Smartwatches",
     function: "",
-    selected: false,
   },
 ];
 
@@ -35,15 +31,17 @@ function LatestOffers() {
         <ul className="products-selection flex justify-center">
           {
             //this will create all the category buttons needed
-            categories.map((category) => (
-              <li>
-                <ProductCategory
-                  name={category.name}
-                  function={category.function}
-                  selected={category.selected}
-                />
-              </li>
-            ))
+            categories.map((category) => {
+              return (
+                <li key={`${category.name}_navbar_page`}>
+                  <ProductCategory
+                    name={category.name}
+                    function={category.function}
+                    selected={category.selected}
+                  />
+                </li>
+              );
+            })
           }
         </ul>
       </div>

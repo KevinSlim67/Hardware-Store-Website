@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductPage from './pages/product';
 import SupportPage from './pages/support';
 
-
 function App() {
   return (
     <Router>

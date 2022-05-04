@@ -1,7 +1,8 @@
 import React from "react";
 import Product from "./product";
 
-function ProductsList(props) {
+
+function ProductsList() {
   return (
     <div className="mt-10 flex flex-wrap justify-center w-full">
       <Product />
