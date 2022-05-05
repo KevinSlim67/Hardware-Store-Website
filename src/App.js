@@ -8,7 +8,7 @@ import SupportPage from './pages/support';
 function App() {
   return (
     <Router>
-      <div className="App bg-secondary">
+      <div className="App bg-secondary selection:bg-accent-100 selection:text-primary-700">
         <div className="Layout">
           <Routes>
             <Route path="/" element={<HomePage />} />
