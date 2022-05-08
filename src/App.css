@@ -1,6 +1,9 @@
 html {
   font-size: 16px;
-  background-color: #dddef3;
+}
+
+body {
+  background-color: #f8f8ff;
 }
 
 * {
@@ -137,6 +140,62 @@ html {
   }
 }
 
+.product-box:hover .home-product-image {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.product-box .home-product-image {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.product-box:hover .home-product-name {
+  opacity: 0%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: opacity 200ms, -webkit-transform 200ms ease;
+  transition: opacity 200ms, -webkit-transform 200ms ease;
+  transition: transform 200ms ease, opacity 200ms;
+  transition: transform 200ms ease, opacity 200ms, -webkit-transform 200ms ease;
+}
+
+.product-box .home-product-name {
+  opacity: 100%;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: opacity 200ms, -webkit-transform 200ms ease;
+  transition: opacity 200ms, -webkit-transform 200ms ease;
+  transition: transform 200ms ease, opacity 200ms;
+  transition: transform 200ms ease, opacity 200ms, -webkit-transform 200ms ease;
+}
+
+.product-box .product-buy-btn {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.product-box:hover .product-buy-btn {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
 @media (max-width: 850px) {
   .footer-layout {
     -webkit-box-orient: vertical;
@@ -153,6 +212,47 @@ html {
   .footer-section {
     width: 100%;
     margin: 3rem 0;
+  }
+}
+
+.product-hero {
+  background-image: url("../public/assets/images/products/product_hero_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.support-hero {
+  background-image: linear-gradient(262.31deg, rgba(188, 190, 253, 0.38) 0%, rgba(20, 23, 72, 0.55) 100%), url("../public/assets/images/products/support_hero_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-shadow {
+  text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.selected-shadow {
+  -webkit-box-shadow: 0px 0px 26px 6px rgba(188, 190, 253, 0.65);
+  box-shadow: 0px 0px 26px 6px rgba(188, 190, 253, 0.65);
+}
+
+.support-product:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+@media (max-width: 550px) {
+  .support-header {
+    height: 300px;
+  }
+  .support-choosing {
+    padding: 5rem 1rem;
+  }
+  .support-product {
+    width: 100%;
+  }
+  .support-product-caption {
+    font-size: 4.2vw;
   }
 }
 /*# sourceMappingURL=App.css.map */

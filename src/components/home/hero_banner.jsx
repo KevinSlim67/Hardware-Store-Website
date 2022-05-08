@@ -2,7 +2,7 @@ import React from "react";
 
 function HeroBanner() {
   return (
-    <div className="hero-header flex justify-end h-auto bg-primary-400">
+    <div className="hero-header flex justify-end h-auto bg-primary-400 opacity-95">
       <h2 className="hero-text flex items-center a text-primary-600 text-[4vw]
        text-center font-bold w-[32%] min-w-[400px] mr-5 pr-10 pl-10 pt-3 pb-5 leading-[3rem]">
         Stay up to date with the latest technologies

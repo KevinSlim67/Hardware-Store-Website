@@ -1,17 +1,26 @@
-import React, { useReducer } from "react";
+import React, { useState } from "react";
 import Product from "./product";
 
 function ChooseProduct() {
+  const [products, setProducts] = useState([
+    { category: "Laptop", selected: true },
+    { category: "Smartphone", selected: false },
+    { category: "Tablet", selected: false },
+    { category: "Smartwatch", selected: false },
+  ]);
 
-  const defaultBorderClasses =
-  "border-[1px] border-primary-400 border-opacity-20";
+  //will set selected in products as true for the inputted parameter, and the rest as false
+  const handleSelection = (productCat) => {
+    console.log(`Selected ${productCat} Category`);
+    const newProducts = products.map((product) => {
+      if (product.category === productCat) {
+        return { category: product.category, selected: true };
+      }
+      return { category: product.category, selected: false };
+    });
 
-  const products = [
-    { category: "Laptop", borderClasses: defaultBorderClasses  },
-    { category: "Smartphone", borderClasses: defaultBorderClasses },
-    { category: "Tablet", borderClasses: defaultBorderClasses },
-    { category: "Smartwatch", borderClasses: defaultBorderClasses },
-  ];
+    setProducts(newProducts);
+  };
 
   return (
     <div className="mb-20">
@@ -25,6 +34,8 @@ function ChooseProduct() {
             <Product
               key={`category-${product.category}`}
               category={product.category}
+              selected={product.selected}
+              onSelection={handleSelection}
             />
           ))
         }

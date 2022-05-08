@@ -23,11 +23,6 @@ body {
   justify-content: center;
 }
 
-.Layout {
-  position: relative;
-  width: 100%;
-  max-width: 1366px;
-}
 
 //NavBar---------------------------------------
 .hamburger-btn {
@@ -134,6 +129,40 @@ body {
   .product-category {
     margin: 0 1rem;
   }
+}
+
+
+.product-box:hover .home-product-image {
+  transform: scale(1.08);
+  transition: transform 200ms ease;
+}
+
+.product-box .home-product-image {
+  transform: scale(1);
+  transition: transform 200ms ease;
+}
+
+
+.product-box:hover .home-product-name {
+  opacity: 0%;
+  transform: scaleY(0);
+  transition: transform 200ms ease, opacity 200ms;
+}
+
+.product-box .home-product-name {
+  opacity: 100%;
+  transform: scaleY(1);
+  transition: transform 200ms ease, opacity 200ms;
+}
+
+.product-box .product-buy-btn {
+  transform: scale(0);
+  transition: transform 200ms ease;
+}
+
+.product-box:hover .product-buy-btn {
+  transform: scale(1.1);
+  transition: transform 200ms ease;
 }
 //----------------------------------------------------------
 
