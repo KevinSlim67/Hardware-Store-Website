@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/footer/footer";
 import NavBar from "../components/navbar/navbar";
+import NotImplemented from "../components/not_implemented";
 import ChooseDevice from "../components/support/choose_device";
 import ChooseProduct from "../components/support/choose_product";
 import Header from "../components/support/header";
@@ -15,6 +16,7 @@ function SupportPage() {
           <ChooseDevice />
         </div>
       <Footer />
+      <NotImplemented />
     </div>
   );
 }

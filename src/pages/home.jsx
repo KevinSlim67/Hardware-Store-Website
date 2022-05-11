@@ -4,6 +4,7 @@ import NavBar from "../components/navbar/navbar";
 import Header from "../components/home/header";
 import LatestOffers from "../components/home/latest_offers/latest_offers";
 import Footer from "../components/footer/footer";
+import NotImplemented from "../components/not_implemented";
 
 function HomePage() {
   return (
@@ -15,6 +16,7 @@ function HomePage() {
         <LatestOffers />
       </div>
       <Footer />
+      <NotImplemented />
     </div>
   );
 }

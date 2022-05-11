@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/footer/footer";
 import NavBar from "../components/navbar/navbar";
+import NotImplemented from "../components/not_implemented";
 import Header from "../components/product/header";
 
 function ProductPage() {
@@ -9,6 +10,7 @@ function ProductPage() {
       <NavBar selected="Product" />
         <Header />
       <Footer />
+      <NotImplemented />
     </div>
   );
 }

@@ -1,22 +1,20 @@
 import './App.scss';
-import React, {useState, useLayoutEffect} from 'react';
 import HomePage from './pages/home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductPage from './pages/product';
 import SupportPage from './pages/support';
 
 function App() {
-  
+
   const width = {
     width: '100%',
-    maxWidth: '2000px'
+    maxWidth: '1700px'
   }
-
 
   return (
     <Router>
       <div className="App bg-secondary selection:bg-accent-100 selection:text-primary-700">
-        <div style={width} className="Layout">
+        <div id="Layout" style={width} className="Layout">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
