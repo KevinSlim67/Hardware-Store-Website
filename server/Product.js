@@ -1,42 +1,83 @@
 const mongoose = require('mongoose');
 
-const addressSchema = new mongoose.Schema({
-    street: String,
-    city: String,
+const versionSchema = new mongoose.Schema({
+    version: {
+        type: String,
+        required: true
+    },
+
+    price : {
+        type: Number,
+        required: true
+    }
 })
 
-const userSchema = new mongoose.Schema({
-    name: String,
-    age: {
-        type: Number,
-        min: 1, //minimum value possible is 1
-        max: 120, //maximum value possible is 120
-        validate: {
-            validator: v => v % 2, //makes it so value has to be even
-            message: props => `${props.value} is not an even number`
-        }
-    },
-    email: {
+const diskSchema = new mongoose.Schema({
+    category: {
         type: String,
-        minlength: 10, //minimum 10 characters
-        required: true, //makes the email field required
-        lowercase: true //makes the email field lowercase
+        enum: ['hdd', 'ssd'],
+        required: true
     },
-    createdAt: {
+
+    storage : {
+        type: String,
+        required: true
+    }
+})
+
+const productSchema = new mongoose.Schema({
+    description: {
+        type: String,
+        required: true
+    },
+
+    category: {
+        type: String,
+        enum: ['laptop','smartphone','tablet','smartwatch'],
+        required: true
+    },
+
+    brand: {
+        type: String,
+        enum: ['apple, samsung'],
+        required: true
+    },
+
+    version: {
+        type: versionSchema,
+        required: true
+    },
+
+    release_date: {
         type: Date,
-        immutable: true, //prevents you from changing value
-        default: () => Date.now() //gets current date
+        required: true
     },
-    updatedAt: {
-        type: Date,
-        default: () => Date.now() //gets current date
+
+    color: {
+        type: String,
+        required: true
     },
-    bestFriend: {
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: "User", //sets this field as a reference to the table "User"
+
+    ram: {
+        type: String,
+        enum: ['1GB', '2GB', '4GB', '8GB', '16GB', '32GB'],
+        required: true
     },
-    hobbies: [String], //array of Strings
-    address: addressSchema
+
+    cpu: {
+        type: String,
+        required: true
+    },
+
+    disk: {
+        type: String,
+    },
+
+    numberSold: {
+        type: Number,
+        default: 0
+    }
+
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Product", productSchema);
