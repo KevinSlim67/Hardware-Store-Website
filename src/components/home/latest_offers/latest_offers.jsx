@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ProductsList from "./products_list";
 import ProductCategory from "./product_category";
 
 function LatestOffers() {
-
   const [categories, setCategories] = useState([
     { name: "Laptops", selected: true, function: "" },
     { name: "Smartphones", selected: false, function: "" },
@@ -11,18 +10,18 @@ function LatestOffers() {
     { name: "Smartwatches", selected: false, function: "" },
   ]);
 
-    //will set selected in categories as true for the inputted parameter, and the rest as false
-    const handleSelection = (categoryName) => {
-      console.log(`Selected ${categoryName} Category`);
-      const newCategories = categories.map((category) => {
-        if (category.name === categoryName) {
-          return { name: category.name, selected: true };
-        }
-        return { name: category.name, selected: false };
-      });
-  
-      setCategories(newCategories);
-    };
+  //will set selected in categories as true for the inputted parameter, and the rest as false
+  const handleSelection = (categoryName) => {
+    console.log(`Selected ${categoryName} Category`);
+    const newCategories = categories.map((category) => {
+      if (category.name === categoryName) {
+        return { name: category.name, selected: true };
+      }
+      return { name: category.name, selected: false };
+    });
+
+    setCategories(newCategories);
+  };
 
   return (
     <section className="bg-primary-200 flex flex-col items-center ">

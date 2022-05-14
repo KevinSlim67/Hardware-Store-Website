@@ -1,22 +1,9 @@
 const mongoose = require('mongoose');
 
-const versionSchema = new mongoose.Schema({
-    version: {
-        type: String,
-        required: true
-    },
-
-    price : {
-        type: Number,
-        required: true
-    }
-})
-
 const diskSchema = new mongoose.Schema({
     category: {
         type: String,
         enum: ['hdd', 'ssd'],
-        required: true
     },
 
     storage : {
@@ -39,16 +26,26 @@ const productSchema = new mongoose.Schema({
 
     brand: {
         type: String,
-        enum: ['apple, samsung'],
+        enum: ['apple', 'samsung', 'hp', 'toshiba'],
+        required: true
+    },
+
+    OS: {
+        type: String,
+        enum: ['android', 'ios', 'macos', 'windows', 'linux'],
         required: true
     },
 
     version: {
-        type: versionSchema,
+        type: 'String'
+    },
+
+    price: {
+        type: Number,
         required: true
     },
 
-    release_date: {
+    releaseDate: {
         type: Date,
         required: true
     },
@@ -60,7 +57,7 @@ const productSchema = new mongoose.Schema({
 
     ram: {
         type: String,
-        enum: ['1GB', '2GB', '4GB', '8GB', '16GB', '32GB'],
+        enum: ['1gb', '2gb', '4gb', '8gb', '16gb', '32gb'],
         required: true
     },
 
@@ -70,7 +67,8 @@ const productSchema = new mongoose.Schema({
     },
 
     disk: {
-        type: String,
+        type: diskSchema,
+        required: true
     },
 
     numberSold: {

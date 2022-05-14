@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { displayFlex } from "../../../features/notImplemented";
 import Button from "../../buttons/button";
 import ProductName from "./product_name";
 
-function Product() {
-
+function Product(props) {
   const dispatch = useDispatch();
 
   return (
@@ -22,13 +21,12 @@ function Product() {
           className="object-contain"
         ></img>
       </div>
-      <ProductName name="Product Name" />
+      <ProductName name={props.product.description} />
       <Button
-          className="product-buy-btn absolute pr-4 pl-4 pt-1 pb-1 bottom-5 text-primary-100"
-          text="Buy"
-          function={() => dispatch(displayFlex())}
-        />
-        
+        className="product-buy-btn absolute pr-4 pl-4 pt-1 pb-1 bottom-5 text-primary-100"
+        text="Buy"
+        function={() => dispatch(displayFlex())}
+      />
     </div>
   );
 }
