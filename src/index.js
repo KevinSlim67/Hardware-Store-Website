@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import notImplementedReducer from './features/notImplemented';
+import latestProductCategory from './features/latestProductCategory';
 
 const store = configureStore({
   reducer: {
-    notImplemented: notImplementedReducer
+    notImplemented: notImplementedReducer,
+    latestProductCategory: latestProductCategory
   }
 });
 

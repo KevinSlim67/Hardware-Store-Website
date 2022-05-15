@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { displayNone } from "../features/notImplemented";
 
 function NotImplemented() {
 
-  const notImplemented=  useSelector((state) => state.notImplemented.value)
+  const notImplemented = useSelector((state) => state.notImplemented.value);
   const dispatch = useDispatch();
 
   const displayStyle = {

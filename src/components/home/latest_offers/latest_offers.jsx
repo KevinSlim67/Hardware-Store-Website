@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import ProductsList from "./products_list";
 import ProductCategory from "./product_category";
+import {useDispatch, useSelector} from "react-redux";
+import { setCategory } from "../../../features/latestProductCategory";
+
 
 function LatestOffers() {
+
+  const productCategory =  useSelector((state) => state.latestProductCategory.category)
+  const dispatch = useDispatch();
+
+
   const [categories, setCategories] = useState([
-    { name: "Laptops", selected: true, function: "" },
-    { name: "Smartphones", selected: false, function: "" },
-    { name: "Tablets", selected: false, function: "" },
-    { name: "Smartwatches", selected: false, function: "" },
+    { name: "laptop", selected: true, function: "" },
+    { name: "smartphone", selected: false, function: "" },
+    { name: "tablet", selected: false, function: "" },
+    { name: "smartwatch", selected: false, function: "" },
   ]);
 
   //will set selected in categories as true for the inputted parameter, and the rest as false
@@ -15,6 +23,8 @@ function LatestOffers() {
     console.log(`Selected ${categoryName} Category`);
     const newCategories = categories.map((category) => {
       if (category.name === categoryName) {
+        //changes global category variale in order to update displayed products
+        dispatch(setCategory({category : category.name}));
         return { name: category.name, selected: true };
       }
       return { name: category.name, selected: false };
@@ -48,7 +58,7 @@ function LatestOffers() {
         </ul>
       </div>
       <div>
-        <ProductsList />
+        <ProductsList category={productCategory} limit={3} />
       </div>
     </section>
   );
