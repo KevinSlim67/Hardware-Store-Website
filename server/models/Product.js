@@ -26,7 +26,7 @@ const productSchema = new mongoose.Schema({
 
     brand: {
         type: String,
-        enum: ['apple', 'samsung', 'hp', 'toshiba'],
+        enum: ['apple', 'samsung', 'hp', 'toshiba', 'acer'],
         required: true
     },
 
@@ -74,6 +74,16 @@ const productSchema = new mongoose.Schema({
     numberSold: {
         type: Number,
         default: 0
+    },
+
+    stock: {
+        type: Number,
+        default: 0
+    },
+
+    image: {
+        type: String,
+        required: true
     }
 
 });

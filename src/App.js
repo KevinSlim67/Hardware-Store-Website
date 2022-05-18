@@ -3,6 +3,7 @@ import HomePage from './pages/home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductPage from './pages/product';
 import SupportPage from './pages/support';
+import ProductBuyPage from "./pages/product_buy";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/product" element={<ProductPage />} />
             <Route path="/support" element={<SupportPage />} />
+            <Route exact path={`/product/:id`} element={<ProductBuyPage />} />
           </Routes>
         </div>
       </div>

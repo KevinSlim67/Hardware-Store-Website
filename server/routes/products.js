@@ -27,7 +27,7 @@ router.get('/category-and-limit', async (req, res) => {
 
 //Getting one
 router.get('/:id', getProduct, (req, res) => {
-    res.send(res.product.name);
+    res.send(res.product);
 });
 
 //Creating one

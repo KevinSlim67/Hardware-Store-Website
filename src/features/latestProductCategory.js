@@ -1,7 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const url = "http://localhost:5000/products";
-
 export const latestProductCategorySlice = createSlice({
     name: "latestProductCategory",
     initialState: {

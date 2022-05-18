@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
 import Product from "./product";
 import axios from "axios";
 
@@ -8,12 +7,13 @@ function ProductsList(props) {
 
   const [products, setProducts] = useState([]);
 
-  
   const url = "http://localhost:5000/products";
   //useEffect prevents the GET request from happening infinitely
   useEffect(() => {
     axios
-      .get(`${url}/category-and-limit`, { params: { category: props.category, limit: props.limit } }) 
+      .get(`${url}/category-and-limit`, {
+        params: { category: props.category, limit: props.limit },
+      })
       .then((response) => {
         setProducts(response.data);
       });
@@ -21,6 +21,15 @@ function ProductsList(props) {
 
   return (
     <div className="mt-10 flex flex-wrap justify-center w-full">
+
+      {/*Displays a message if we couldn't fetch any data from the server*/}
+      {products.length === 0 && (
+        <span className="text-red-600 text-center leading-[3.5rem] text-3xl">
+          Sorry, we could not fetch any data ! <br />
+          The server might be down
+        </span>
+      )}
+      
       {products.map((product) => (
         <Product product={product} key={product.description} />
       ))}

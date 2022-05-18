@@ -26,22 +26,23 @@ app.use('/products', productsRouter);
 //start the sever
 app.listen(5000, () => console.log("Server Started"));
 
-//create product
 // const product = new Product({
-//     description: 'iPhone 12 White 64GB',
-//     category: 'smartphone',
+//     description: 'iPad Pro 3rd Generation',
+//     category: 'tablet',
 //     brand: 'apple',
 //     OS: 'ios',
-//     price: 799,
+//     price: 999,
 //     releaseDate: new Date(),
-//     color: 'white',
-//     ram: '4gb',
-//     cpu: 'ARMv8.5-A',
-//     disk: {storage: '64GB'},
-//     numberSold: 953
+//     color: 'silver',
+//     ram: '8gb',
+//     cpu: '8 core',
+//     disk: {storage: '512GB'},
+//     numberSold: 824,
+//     stock: 200,
+//     image: 'https://lmt.mstatic.lv/devices/images/450x450/Apple_iPad_Pro_11_3rd_Gen_Wi-Fi_1TB_MHQY3HCA75774.png'
 
-// });
-//product.save().then(() => console.log('Product Added'));
+//  });
+//  product.save().then(() => console.log('Product Added'));
 
 
 

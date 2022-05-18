@@ -16,6 +16,7 @@ function Product(props) {
       <img
         src="assets\images\products\hero_image.png"
         className="object-contain p-4"
+        alt="hero"
       />
       <div
         className="support-product-caption w-full text-center bg-primary-400 text-primary-800

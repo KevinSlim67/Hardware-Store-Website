@@ -14,6 +14,7 @@ body {
 
 .page {
   position: relative;
+  background-color: #f8f8ff;
 }
 
 @media (max-width: 600px) {
@@ -26,7 +27,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 
 //NavBar---------------------------------------
 .hamburger-btn {
@@ -135,7 +135,6 @@ body {
   }
 }
 
-
 .product-box:hover .home-product-image {
   transform: scale(1.08);
   transition: transform 200ms ease;
@@ -145,7 +144,6 @@ body {
   transform: scale(1);
   transition: transform 200ms ease;
 }
-
 
 .product-box:hover .home-product-name {
   opacity: 0%;
@@ -247,3 +245,73 @@ body {
 .x-btn:hover {
   color: white;
 }
+
+//Form------------------------------------------------------
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-input {
+  background-color: rgb(255, 255, 255);
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: rgba(195, 180, 250, 0.39);
+  height: 2.7rem;
+  padding: 0 1rem;
+  margin-top: 0.4rem;
+}
+
+.form-input:focus {
+  outline: solid;
+  outline-width: 1px;
+  outline-color: rgba(157, 146, 255, 0.555);
+}
+
+.form-select {
+  position: relative;
+  height: 2.7rem;
+  margin-top: 0.4rem;  
+}
+
+.form-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgb(255, 255, 255);
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: rgba(195, 180, 250, 0.39);
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  display: block;
+}
+
+.form-select:after {
+  content: '>';
+  font: 1rem "Consolas", monospace;
+  font-weight: bold;
+  color: rgb(70, 54, 128);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 0.5rem;
+  top: 50%;
+  bottom: 50%;
+  padding: 0 0 2px;
+  position: absolute;
+}
+ 
+.required:after {
+  content: "*";
+}
+
+form .field {
+  margin-bottom: 2rem;
+}
+
+//----------------------------------------------------------

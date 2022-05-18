@@ -7,11 +7,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import notImplementedReducer from './features/notImplemented';
 import latestProductCategory from './features/latestProductCategory';
+import selectedCountry from './features/selectedCountry';
 
 const store = configureStore({
   reducer: {
     notImplemented: notImplementedReducer,
-    latestProductCategory: latestProductCategory
+    latestProductCategory: latestProductCategory,
+    selectedCountry: selectedCountry
   }
 });
 

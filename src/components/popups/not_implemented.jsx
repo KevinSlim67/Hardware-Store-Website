@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { displayNone } from "../features/notImplemented";
+import { displayNone } from "../../features/notImplemented";
 
 function NotImplemented() {
 
