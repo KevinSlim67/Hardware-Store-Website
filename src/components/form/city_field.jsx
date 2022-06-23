@@ -8,7 +8,6 @@ function CityField(props) {
   //gets an array of cities who's key is equal to country
   //Set() gets rid of duplicate values
   const cities = [...new Set(require("./countries.json")[country])];
-  console.log(cities);
 
   return (
     <div className={`field ${props.className}`}>

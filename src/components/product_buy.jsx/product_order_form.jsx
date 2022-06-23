@@ -3,6 +3,8 @@ import CityField from "../form/city_field";
 import CountryField from "../form/country_field";
 import EmailField from "../form/email_field";
 import PhoneField from "../form/phone_field";
+import PostalZipCodeField from "../form/postal_zipcode";
+import StateProvinceField from "../form/state_province";
 
 function ProductOrderForm(props) {
   const label = "text-primary-700 text-[1.4rem] font-semibold";
@@ -18,9 +20,15 @@ function ProductOrderForm(props) {
 
           <EmailField label={label} />
           <PhoneField label={label}/>
+
           <div className="flex w-full">
             <CountryField label={label} className="w-1/2 mr-2" />
             <CityField label={label} className="w-1/2 ml-2" />
+          </div>
+
+          <div className="flex w-full">
+            <StateProvinceField label={label} className="w-1/2 mr-2" />
+            <PostalZipCodeField label={label} className="w-1/2 ml-2" />
           </div>
 
 
