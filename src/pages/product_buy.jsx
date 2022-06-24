@@ -5,7 +5,6 @@ import NavBar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 import ProductSpecs from "../components/product_buy.jsx/product_specs";
 import ProductOrderForm from "../components/product_buy.jsx/product_order_form";
-import NotImplemented from "../features/notImplemented";
 
 function ProductBuyPage() {
   //gets id that is in the url
@@ -22,19 +21,20 @@ function ProductBuyPage() {
     });
   }, [id]);
 
+
   return (
     <div className="page">
       <NavBar selected="Product" />
       <div className="flex justify-center w-full">
         {data !== null /* prevents rendering while the data hasn't been fetched yet */ && (
-          <div className="flex justify-center w-[1250px] mt-16 mb-16">
+          <div className="flex justify-center w-[78.125rem] mt-16 mb-16">
             <ProductSpecs data={data} className="w-1/2" />
             <ProductOrderForm data={data} className="w-1/2" />
           </div>
         )}
       </div>
       <Footer />
-      <NotImplemented />
+
     </div>
   );
 }

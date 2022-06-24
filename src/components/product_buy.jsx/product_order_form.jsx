@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "../buttons/button";
+import AddressExtraField from "../form/address_field";
 import CityField from "../form/city_field";
 import CountryField from "../form/country_field";
 import EmailField from "../form/email_field";
@@ -7,7 +9,7 @@ import PostalZipCodeField from "../form/postal_zipcode";
 import StateProvinceField from "../form/state_province";
 
 function ProductOrderForm(props) {
-  const label = "text-primary-700 text-[1.4rem] font-semibold";
+  const label = "text-primary-700 text-[1.3rem] font-semibold";
 
   const data = props.data;
   return (
@@ -19,7 +21,7 @@ function ProductOrderForm(props) {
           </legend>
 
           <EmailField label={label} />
-          <PhoneField label={label}/>
+          <PhoneField label={label} />
 
           <div className="flex w-full">
             <CountryField label={label} className="w-1/2 mr-2" />
@@ -31,7 +33,8 @@ function ProductOrderForm(props) {
             <PostalZipCodeField label={label} className="w-1/2 ml-2" />
           </div>
 
-
+          <AddressExtraField label={label} />
+          <Button text="Order" className="pr-6 pl-6 pt-3 pb-3" />
         </fieldset>
       </form>
     </div>

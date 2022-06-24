@@ -7,7 +7,7 @@ function EmailField(props) {
         Email
       </label>
       <input
-        type="text"
+        type="email"
         name="email"
         id="email"
         className="form-input w-full"
