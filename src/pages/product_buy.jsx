@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import NavBar from "../components/navbar/navbar";
-import Footer from "../components/footer/footer";
 import ProductSpecs from "../components/product_buy.jsx/product_specs";
 import ProductOrderForm from "../components/product_buy.jsx/product_order_form";
 
@@ -33,8 +32,6 @@ function ProductBuyPage() {
           </div>
         )}
       </div>
-      <Footer />
-
     </div>
   );
 }

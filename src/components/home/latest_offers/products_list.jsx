@@ -12,7 +12,7 @@ function ProductsList(props) {
   useEffect(() => {
     axios
       .get(`${url}/category-and-limit`, {
-        params: { category: props.category, limit: props.limit },
+        params: { category: props.category, page: 'home/latest'},
       })
       .then((response) => {
         setProducts(response.data);

@@ -1,8 +1,7 @@
 import React from "react";
-import Footer from "../components/footer/footer";
 import NavBar from "../components/navbar/navbar";
-import NotImplemented from "../components/popups/not_implemented"
 import Header from "../components/product/header";
+import ProductList from "../components/product/product_list";
 
 
 function ProductPage() {
@@ -10,8 +9,10 @@ function ProductPage() {
     <div>
       <NavBar selected="Product" />
         <Header />
-      <Footer />
-      <NotImplemented />
+        <ProductList category="laptop"/>
+        <ProductList category="smartphone"/>
+        <ProductList category="tablet"/>
+        <ProductList category="smartwatch"/>
     </div>
   );
 }

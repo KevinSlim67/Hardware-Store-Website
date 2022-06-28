@@ -25,7 +25,9 @@ body {
 
 .App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 //NavBar---------------------------------------
@@ -160,6 +162,11 @@ body {
 .product-box .product-buy-btn {
   transform: scale(0);
   transition: transform 200ms ease;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 4rem;
+  height: 2rem;
 }
 
 .product-box:hover .product-buy-btn {

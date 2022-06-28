@@ -27,19 +27,19 @@ app.use('/products', productsRouter);
 app.listen(5000, () => console.log("Server Started"));
 
 // const product = new Product({
-//     description: 'iPad Pro 3rd Generation',
-//     category: 'tablet',
-//     brand: 'apple',
-//     OS: 'ios',
+//     description: 'Microsoft Surface 16 GB',
+//     category: 'laptop',
+//     brand: 'microsoft',
+//     OS: 'windows',
 //     price: 999,
 //     releaseDate: new Date(),
-//     color: 'silver',
-//     ram: '8gb',
-//     cpu: '8 core',
-//     disk: {storage: '512GB'},
-//     numberSold: 824,
-//     stock: 200,
-//     image: 'https://lmt.mstatic.lv/devices/images/450x450/Apple_iPad_Pro_11_3rd_Gen_Wi-Fi_1TB_MHQY3HCA75774.png'
+//     color: 'black',
+//     ram: '16gb',
+//     cpu: 'Intel Core i7-11xxx',
+//     disk: {storage: '256GB', category: 'ssd'},
+//     numberSold: 814,
+//     stock: 2100,
+//     image: 'https://i.ibb.co/2kdVYWD/614b8-F64r-S-AC-SL1500-removebg-preview.png'
 
 //  });
 //  product.save().then(() => console.log('Product Added'));

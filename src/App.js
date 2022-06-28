@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductPage from './pages/product';
 import SupportPage from './pages/support';
 import ProductBuyPage from "./pages/product_buy";
+import Footer from './components/footer/footer';
+import NotImplemented from './components/popups/not_implemented';
 
 function App() {
 
@@ -11,6 +13,7 @@ function App() {
     width: '100%',
     maxWidth: '1700px'
   }
+  
 
   return (
     <Router>
@@ -20,10 +23,13 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/product" element={<ProductPage />} />
-            <Route path="/support" element={<SupportPage />} />
+            <Route exact path="/support" element={<SupportPage />} />
             <Route exact path={`/product/:id`} element={<ProductBuyPage />} />
           </Routes>
+          <Footer />
+          <NotImplemented />
         </div>
+        
       </div>
     </Router>
   );

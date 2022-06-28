@@ -12,12 +12,17 @@ router.get('/', async (req, res) => {
     }
 });
 
-//Getting all with specified category, sorted by newest date, and limited to a certain number
+//Getting all with specified category, sorted by their release date from newest to oldest,
+//and limited to a certain number depending on which page and section
 router.get('/category-and-limit', async (req, res) => {
+    let limit = 3;
+    if (req.query.page === 'product') limit = 18;
+    else if (req.query.page === 'home/latest') limit = 3;
+
     try {
         const products = await Product.find({ category: req.query.category }).
-            sort({ 'releaseDate': -1 }).
-            limit(req.query.limit);
+            sort({"releaseDate" : -1}).
+            limit(limit);
 
         res.json(products);
     } catch (err) {

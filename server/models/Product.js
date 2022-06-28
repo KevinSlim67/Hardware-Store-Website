@@ -20,13 +20,13 @@ const productSchema = new mongoose.Schema({
 
     category: {
         type: String,
-        enum: ['laptop','smartphone','tablet','smartwatch'],
+        enum: ['laptop', 'smartphone', 'tablet', 'smartwatch'],
         required: true
     },
 
     brand: {
         type: String,
-        enum: ['apple', 'samsung', 'hp', 'toshiba', 'acer'],
+        enum: ['apple', 'samsung', 'hp', 'toshiba', 'acer', 'microsoft'],
         required: true
     },
 
