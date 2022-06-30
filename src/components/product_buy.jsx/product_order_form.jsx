@@ -1,5 +1,4 @@
 import React from "react";
-import emailjs from "emailjs-com";
 import SubmitButton from "../buttons/submit_button";
 import AddressExtraField from "../form/address_field";
 import CityField from "../form/city_field";
@@ -8,12 +7,10 @@ import EmailField from "../form/email_field";
 import PhoneField from "../form/phone_field";
 import PostalZipCodeField from "../form/postal_zipcode";
 import StateProvinceField from "../form/state_province";
-import { useRef } from "react";
 
 function ProductOrderForm(props) {
   const label = "text-primary-700 text-[1.3rem] font-semibold";
   const data = props.data;
-  const url = "http://localhost:5000/purchases";
 
   return (
     <div className={`${props.className} mr-4 ml-4`}>

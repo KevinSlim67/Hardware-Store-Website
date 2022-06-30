@@ -3,13 +3,13 @@ import RoutingButton from "../buttons/routing_button";
 
 function Product(props) {
   //if the product has an image in the database, get the image, otherwise, use a default image
-  let image = "assets/images/products/hero_image.png";
+  let image = "assets/images/products/hero_image.png"; 
   if (props.product.image !== undefined) {
     image = props.product.image;
   }
 
   return (
-    <div className="product-box relative flex flex-col items-center w-[17rem] bg-primary-100 mb-5 mr-5 ml-5 mt-2
+    <div className="product-box relative flex flex-col items-center w-[17rem] bg-primary-100 mt-0 mb-0 mr-auto ml-auto
      rounded-[10px] border-primary-400 border-[1px] border-opacity-10 overflow-hidden">
       
       <div className="home-product-image flex justify-center h-[14rem] w-[90%] m-5">

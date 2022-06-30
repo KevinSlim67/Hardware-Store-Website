@@ -164,7 +164,10 @@ body {
   transition: transform 200ms ease;
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 4rem;
   height: 2rem;
 }
@@ -191,11 +194,59 @@ body {
 //----------------------------------------------------------
 
 //Product Section-------------------------------------------
-.product-hero {
-  background-image: url("../public/assets/images/products/product_hero_image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.hero .slick-slider {
+  overflow: hidden !important;
+  position: relative !important;
 }
+
+.hero .slick-dots {
+  top: 90%;
+}
+
+@media (max-width: 830px) {
+  .hero .slick-dots {
+    display: none !important;
+  }
+}
+
+.hero .slick-dots li button:before {
+  color: #00c9a7 !important;
+}
+
+.hero .slick-next {
+  overflow: hidden;
+}
+
+@media (max-width: 810px) {
+  .product-list .slick-arrow {
+    display: none !important;
+  }
+}
+
+.product-list .slick-arrow {
+  transform: scale(2) !important;
+  border-radius: 50% !important;
+  background-size: cover !important;
+}
+
+.product-list .slick-arrow:hover, .slick-prev:hover, .slick-next:hover {
+  background-color: rgba(2, 9, 15, 0.068);
+}
+
+.product-list .slick-prev {
+  background-image: url("../public/assets/images/icons/arrow_left.png") !important;
+  background-position: -1px 0 !important;
+}
+
+.product-list .slick-next {
+  background-image: url("../public/assets/images/icons/arrow_right.png") !important;
+  background-position: 1px 0 !important;
+}
+
+.product-list .slick-arrow::before {
+  content:"" !important;
+}
+
 //----------------------------------------------------------
 
 //Support Section-------------------------------------------
@@ -260,7 +311,6 @@ body {
   flex-direction: column;
 }
 
-
 .form-input {
   background-color: rgb(255, 255, 255);
   border-width: 1px;
@@ -280,7 +330,7 @@ body {
 .form-select {
   position: relative;
   height: 2.7rem;
-  margin-top: 0.4rem;  
+  margin-top: 0.4rem;
 }
 
 .form-select select {
@@ -298,7 +348,7 @@ body {
 }
 
 .form-select:after {
-  content: '>';
+  content: ">";
   font: 1rem "Consolas", monospace;
   font-weight: bold;
   color: rgb(70, 54, 128);
@@ -312,7 +362,7 @@ body {
   padding: 0 0 2px;
   position: absolute;
 }
- 
+
 .required:after {
   content: "*";
 }

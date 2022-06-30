@@ -7,12 +7,13 @@ function Arrow(props) {
   if (props.direction === "right") rotation = "rotate-180";
 
   return (
-    <button
+    <div
       onClick={props.onClick}
       className={`object-contain ${props.className} ${rotation} hover:bg-slate-300 hover:bg-opacity-20 rounded-full`}
+      style={{ ...props.style, display: "block", background: "green" }}
     >
       <img src={image} alt="arrow" />
-    </button>
+    </div>
   );
 }
 
