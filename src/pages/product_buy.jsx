@@ -26,9 +26,9 @@ function ProductBuyPage() {
       <NavBar selected="Product" />
       <div className="flex justify-center w-full">
         {data !== null /* prevents rendering while the data hasn't been fetched yet */ && (
-          <div className="flex justify-center w-[78.125rem] mt-16 mb-16">
-            <ProductSpecs data={data} className="w-1/2" />
-            <ProductOrderForm data={data} className="w-1/2" />
+          <div className="product-buy-page flex justify-center w-[78.125rem] mt-16 mb-16">
+            <ProductSpecs data={data} className="w-1/2 product-spec" />
+            <ProductOrderForm data={data} className="w-1/2 product-order-form" />
           </div>
         )}
       </div>

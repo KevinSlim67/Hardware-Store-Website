@@ -16,7 +16,7 @@ function PhoneField(props) {
 
       <div className="flex w-full ">
 
-        <div className="form-select w-[20%] mr-3">
+        <div className="form-select product-area-field mr-3">
           <select
             id="area-code"
             name="area-code"
@@ -35,7 +35,7 @@ function PhoneField(props) {
           name="phone"
           id="phone"
           type="tel"
-          className="form-input w-[80%]"
+          className="form-input product-tel-field"
           required={true}
         />
       </div>

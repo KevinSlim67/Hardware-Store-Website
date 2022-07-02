@@ -23,18 +23,24 @@ function ProductOrderForm(props) {
           <EmailField label={label} />
           <PhoneField label={label} />
 
-          <div className="flex w-full">
-            <CountryField label={label} className="w-1/2 mr-2" />
-            <CityField label={label} className="w-1/2 ml-2" />
+          <div className="two-fields">
+            <CountryField label={label} className="small-field mr-2" />
+            <CityField label={label} className="small-field ml-2" />
           </div>
 
-          <div className="flex w-full">
-            <StateProvinceField label={label} className="w-1/2 mr-2" />
-            <PostalZipCodeField label={label} className="w-1/2 ml-2" />
+          <div className="two-fields">
+            <StateProvinceField label={label} className="small-field mr-2" />
+            <PostalZipCodeField label={label} className="small-field ml-2" />
           </div>
 
           <AddressExtraField label={label} />
-          <SubmitButton text="Order" className="pr-6 pl-6 pt-3 pb-3" />
+
+          <div className="submit-btn-field">
+            <SubmitButton
+              text="Order"
+              className="submit-btn pr-6 pl-6 pt-3 pb-3"
+            />
+          </div>
         </fieldset>
       </form>
     </div>

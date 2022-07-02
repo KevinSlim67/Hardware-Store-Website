@@ -16,10 +16,6 @@ const pages = [
     name: "Support",
     dest: "/support",
   },
-  {
-    name: "Contact",
-    dest: "/contact",
-  },
 ];
 
 const checkSelected = (props, name) => {

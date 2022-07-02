@@ -26,9 +26,9 @@ function SupportTicketPage() {
       <NavBar selected="Support" />
       <div className="flex justify-center w-full">
         {data !== null /* prevents rendering while the data hasn't been fetched yet */ && (
-          <div className="flex justify-center w-[78.125rem] mt-16 mb-16">
-            <ProductSpecs data={data} className="w-1/2" />
-            <SupportTicketForm data={data} className="w-1/2" />
+          <div className="support-ticket-page flex justify-center w-[78.125rem] mt-16 mb-16">
+            <ProductSpecs data={data} className="w-1/2 product-spec" />
+            <SupportTicketForm data={data} className="w-1/2 support-ticket" />
           </div>
         )}
       </div>

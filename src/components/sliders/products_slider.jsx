@@ -30,8 +30,8 @@ class ProductsSlider extends Component {
       <div className={`w-[90%] flex justify-center ${className}`}>
         <Slider {...settings} className="w-[95%] relative">
           {list.map((elem) => (
-            <div>
-              <Product product={elem} key={elem._id} />
+            <div key={elem._id}>
+              <Product product={elem} />
             </div>
           ))}
         </Slider>
