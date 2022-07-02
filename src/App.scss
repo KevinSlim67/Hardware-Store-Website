@@ -290,15 +290,14 @@ body {
   .support-choosing {
     padding: 5rem 1rem;
   }
+}
 
-  .support-product {
-    width: 100%;
-  }
-
+@media (max-width: 400px) {
   .support-product-caption {
-    font-size: 4.2vw;
+    font-size: 3vw;
   }
 }
+
 //----------------------------------------------------------
 
 .x-btn:hover {

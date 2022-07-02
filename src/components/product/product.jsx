@@ -12,7 +12,7 @@ function Product(props) {
     <div
       className="product-box relative flex flex-col items-center w-[17rem] bg-primary-100 mt-0 mb-0 mr-auto ml-auto
      rounded-[10px] border-primary-400 border-[1px] border-opacity-10 overflow-hidden"
-      onTouchEnd={(event) =>
+      onClick={(event) =>
         (window.location.href = `/product/${props.product._id}`)
       }
     >

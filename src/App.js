@@ -6,6 +6,7 @@ import SupportPage from './pages/support';
 import ProductBuyPage from "./pages/product_buy";
 import Footer from './components/footer/footer';
 import NotImplemented from './components/popups/not_implemented';
+import SupportTicketPage from './pages/support_ticket';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/product" element={<ProductPage />} />
             <Route exact path="/support" element={<SupportPage />} />
             <Route exact path={`/product/:id`} element={<ProductBuyPage />} />
+            <Route exact path={`/support/:id`} element={<SupportTicketPage />} />
           </Routes>
           <Footer />
           <NotImplemented />
