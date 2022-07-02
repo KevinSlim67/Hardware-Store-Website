@@ -10,7 +10,7 @@ function Header() {
   
 
   return (
-    <SimpleSlider list={list} className="hero"/>
+    <SimpleSlider list={list} className="hero product-hero-height"/>
   );
 }
 

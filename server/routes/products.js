@@ -18,6 +18,7 @@ router.get('/category-and-limit', async (req, res) => {
     let limit = 3;
     if (req.query.page === 'product') limit = 18;
     else if (req.query.page === 'home/latest') limit = 3;
+    else if (req.query.page === 'support') limit = 0;
 
     try {
         const products = await Product.find({ category: req.query.category }).

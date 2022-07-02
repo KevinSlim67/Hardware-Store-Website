@@ -10,7 +10,12 @@ function Product(props) {
   }
 
   return (
-    <div className="product-box relative flex flex-col items-center w-80 bg-primary-100 mb-5 mr-5 ml-5 mt-2 p-5 rounded-[40px]">
+    <div
+      className="product-box relative flex flex-col items-center w-80 bg-primary-100 mb-5 mr-5 ml-5 mt-2 p-5 rounded-[40px]"
+      onTouchEnd={(event) =>
+        (window.location.href = `/product/${props.product._id}`)
+      }
+    >
       <div className="w-[95%] flex justify-start">
         <span className="bg-info text-secondary rounded-3xl pr-2 pl-2">
           New
@@ -26,7 +31,7 @@ function Product(props) {
 
       <div className="relative w-full flex flex-col items-center mt-2">
         <ProductName name={props.product.description.trim()} />
-        
+
         <span className="home-product-name text-accent-800 text-[1.1rem]">{`$${props.product.price}`}</span>
 
         <RoutingButton

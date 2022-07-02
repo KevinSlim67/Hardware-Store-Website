@@ -27,22 +27,22 @@ app.use('/products', productsRouter);
 app.listen(5000, () => console.log("Server Started"));
 
 // const product = new Product({
-//     description: 'Microsoft Surface 16 GB',
-//     category: 'laptop',
-//     brand: 'microsoft',
-//     OS: 'windows',
-//     price: 999,
+//     description: " Samsung Galaxy Watch4",
+//     category: 'smartwatch',
+//     brand: 'apple',
+//     OS: 'ios',
+//     price: 499,
 //     releaseDate: new Date(),
-//     color: 'black',
-//     ram: '16gb',
-//     cpu: 'Intel Core i7-11xxx',
-//     disk: {storage: '256GB', category: 'ssd'},
-//     numberSold: 814,
-//     stock: 2100,
-//     image: 'https://i.ibb.co/2kdVYWD/614b8-F64r-S-AC-SL1500-removebg-preview.png'
+//     color: 'pink',
+//     ram: '4gb',
+//     cpu: 'amd',
+//     disk: {storage: '32GB', category: 'hdd'},
+//     numberSold: 2364,
+//     stock: 1714,
+//     image: 'https://i.ibb.co/tQqJ4v2/samsung-galaxy-watch4-smartwatch-removebg-preview.png'
 
 //  });
-//  product.save().then(() => console.log('Product Added'));
+//  product.save().then(() => console.log('Product Added')); 
 
 
 

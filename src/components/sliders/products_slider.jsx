@@ -41,4 +41,3 @@ class ProductsSlider extends Component {
 }
 
 export default ProductsSlider;
-

@@ -3,15 +3,19 @@ import RoutingButton from "../buttons/routing_button";
 
 function Product(props) {
   //if the product has an image in the database, get the image, otherwise, use a default image
-  let image = "assets/images/products/hero_image.png"; 
+  let image = "assets/images/products/hero_image.png";
   if (props.product.image !== undefined) {
     image = props.product.image;
   }
 
   return (
-    <div className="product-box relative flex flex-col items-center w-[17rem] bg-primary-100 mt-0 mb-0 mr-auto ml-auto
-     rounded-[10px] border-primary-400 border-[1px] border-opacity-10 overflow-hidden">
-      
+    <div
+      className="product-box relative flex flex-col items-center w-[17rem] bg-primary-100 mt-0 mb-0 mr-auto ml-auto
+     rounded-[10px] border-primary-400 border-[1px] border-opacity-10 overflow-hidden"
+      onTouchEnd={(event) =>
+        (window.location.href = `/product/${props.product._id}`)
+      }
+    >
       <div className="home-product-image flex justify-center h-[14rem] w-[90%] m-5">
         <img
           src={image}
@@ -32,7 +36,6 @@ function Product(props) {
           text="Buy"
           dest={`/product/${props.product._id}`}
         />
-        {props.product.id}
       </div>
     </div>
   );

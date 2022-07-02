@@ -1,6 +1,6 @@
 import React from "react";
 
-function Product(props) {
+function Category(props) {
   let border = "border-[1px] border-primary-400 border-opacity-20";
   if (props.selected)
     border =
@@ -14,19 +14,19 @@ function Product(props) {
       onClick={() => props.onSelection(props.category)}
     >
       <img
-        src={props.product.image}
+        src={props.image}
         className="object-contain p-3 h-[12rem]"
-        alt={props.product._id}
+        alt={props.category}
       />
 
       <div
         className="support-product-caption flex items-center justify-center w-full bg-primary-400 text-primary-800
-       rounded-bl-[30px] rounded-br-[30px] p-2 h-[2.5rem] whitespace-nowrap"
+       rounded-bl-[30px] rounded-br-[30px] p-2 h-[2.5rem]"
       >
-        {props.product.description}
+        {props.category}
       </div>
     </div>
   );
 }
 
-export default Product;
+export default Category;
