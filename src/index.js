@@ -11,13 +11,15 @@ import selectedCountry from './features/selectedCountry';
 import selectedCategory from './features/selectedCategory';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import mobileNavBar from './features/mobileNavBar';
 
 const store = configureStore({
   reducer: {
     notImplemented: notImplementedReducer,
     latestProductCategory: latestProductCategory,
     selectedCountry: selectedCountry,
-    selectedCategory: selectedCategory
+    selectedCategory: selectedCategory,
+    mobileNavBar : mobileNavBar
   }
 });
 

@@ -1,9 +1,10 @@
 import React from "react";
 
-function HamburgerButton() {
+function HamburgerButton(props) {
+
   return (
-    <button>
-      <img className="hamburger-btn max-w-full max-h-full" src="/assets/images/icons/menu.png" alt="" />
+    <button onClick={props.onClick}>
+      <img className="hamburger-btn max-w-full max-h-full" src="/assets/images/icons/menu.png" alt="navbar button" />
     </button>
   );
 }
