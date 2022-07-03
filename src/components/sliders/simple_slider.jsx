@@ -17,7 +17,7 @@ class SimpleSlider extends Component {
         <Slider {...settings}>
           {this.props.list.map((elem) => (
             <div key={elem} className="object-cover w-full h-full">
-              <img src={elem} className="w-full" />
+              <img src={elem} className="w-full" alt={elem}/>
             </div>
           ))}
         </Slider>
