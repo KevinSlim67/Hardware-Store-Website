@@ -7,13 +7,13 @@ function FooterSocialMedia() {
         Follow Us
       </h4>
       <div className="text-primary-900 w-full flex justify-center">
-        <a href="" className="mb-4 mr-5 ml-5">
+        <a href="/home" className="mb-4 mr-5 ml-5">
           <img src="/assets\images\icons\facebook.png" alt="Facebook icon" className="hover:bg-primary-200 rounded-[50%]" />
         </a>
-        <a href="" className="mb-4 mr-5 ml-5">
+        <a href="/home" className="mb-4 mr-5 ml-5">
           <img src="/assets\images\icons\twitter.png" alt="Twitter icon" className="hover:bg-primary-200 rounded-[50%]" />
         </a>
-        <a href="" className="mb-4 mr-5 ml-5">
+        <a href="/home" className="mb-4 mr-5 ml-5">
           <img src="/assets\images\icons\instagram.png" alt="Instagram icon" className="hover:bg-primary-200 rounded-[50%]" />
         </a>
       </div>

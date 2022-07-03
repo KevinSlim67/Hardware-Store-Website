@@ -6,15 +6,15 @@ function FooterContact() {
       <h4 className="text-primary-900 text-[1.3rem] mb-5 font-semibold ">Contact</h4>
       <div className="text-primary-900  flex-col justify-center leading-8">
         <div className="flex">
-          <img src="/assets/images/icons/message.png" className="object-contain mr-2" />
+          <img src="/assets/images/icons/message.png" className="object-contain mr-2" alt="message" />
           <p>loremipsum@gmail.com</p>
         </div>
         <div className="flex">
-          <img src="/assets/images/icons/phone.png" className="object-contain mr-2" />
+          <img src="/assets/images/icons/phone.png" className="object-contain mr-2" alt="phone" />
           <p>+(961) 55 555 555</p>
         </div>
         <div className="flex">
-          <img src="/assets/images/icons/phone.png" className="object-contain mr-2" />
+          <img src="/assets/images/icons/phone.png" className="object-contain mr-2" alt="phone" />
           <p>+(961) 55 555 555</p>
         </div>
       </div>
