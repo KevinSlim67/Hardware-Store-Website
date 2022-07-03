@@ -284,19 +284,15 @@ body {
   transition: transform 200ms ease;
 }
 
-@media (max-width: 550px) {
-  .support-header {
-    height: 300px;
-  }
-
+@media (max-width: 760px) {
   .support-choosing {
-    padding: 5rem 1rem;
+    padding: 5rem 0.2rem;
   }
 }
 
-@media (max-width: 400px) {
-  .support-product-caption {
-    font-size: 3vw;
+@media (max-width: 600px) {
+  .support-header {
+    height: 300px;
   }
 }
 
@@ -457,3 +453,4 @@ form .field {
     width: 70%;
   }
 }
+//--------------------------------------------------------
