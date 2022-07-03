@@ -28,15 +28,14 @@ const checkSelected = (props, name) => {
 };
 
 function NavBar(props) {
-
   //gets the current display value of the mobile navbar
   const display = useSelector((state) => state.mobileNavBar.display);
   const dispatch = useDispatch();
 
   //handles whether or not the mobile navbar is visible or hidden when you click on the hamburger button
   const handleSelection = () => {
-    if (display === 'none') dispatch(displayBlock())
-    else if (display === 'block') dispatch(displayNone());
+    if (display === "none") dispatch(displayBlock());
+    else if (display === "block") dispatch(displayNone());
   };
 
   return (

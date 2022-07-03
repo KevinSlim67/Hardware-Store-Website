@@ -12,7 +12,8 @@ function App() {
 
   const width = {
     width: '100%',
-    maxWidth: '1700px'
+    maxWidth: '1700px',
+    overflow: 'hidden'
   }
   
 

@@ -99,7 +99,7 @@ body {
 
 //Main Layout-----------------------------------------------
 .main-layout > section {
-  padding: 2rem 0;
+  padding: 2rem 2rem;
 }
 
 @media (max-width: 600px) {
@@ -118,8 +118,9 @@ body {
   }
 
   .about-us-image {
-    order: 2;
-    width: 80%;
+    order: 2; 
+    width: 70%;
+    max-width: 400px;
     padding: 0;
   }
 
@@ -127,6 +128,13 @@ body {
     order: 1;
     width: auto;
   }
+
+  .about-us-text .btn-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
 }
 //----------------------------------------------------------
 

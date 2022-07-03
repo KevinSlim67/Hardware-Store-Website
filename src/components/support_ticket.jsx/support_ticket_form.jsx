@@ -21,7 +21,7 @@ function SupportTicketForm(props) {
           <SelectProblemField label={label} />
           <DescribeProblemField label={label} />
 
-          <SubmitButton text="Send Ticket" className="pr-6 pl-6 pt-3 pb-3" />
+          <SubmitButton text="Send Ticket" className="submit-btn pr-6 pl-6 pt-3 pb-3" />
         </fieldset>
       </form>
     </div>
