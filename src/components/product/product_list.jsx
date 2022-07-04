@@ -1,17 +1,17 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { url } from "../../url";
 import ProductsSlider from "../sliders/products_slider";
 
 function ProductList(props) {
   const [products, setProducts] = useState([]);
 
-  const url = "http://localhost:5000/products";
-
+  const prodURL =  `${url}/products/`
   //useEffect prevents the GET request from happening infinitely
   useEffect(() => {
     axios
-      .get(`${url}/category-and-limit`, {
+      .get(`${prodURL}/category-and-limit`, {
         params: {
           category: props.category,
           page: "product",

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import Product from "./product";
-
+import { url } from "../../url";
 
 function ChooseProduct() {
   //gets the current selected category
@@ -10,11 +10,12 @@ function ChooseProduct() {
   const categorySelected = category.toLowerCase();
   const [products, setProducts] = useState(null);
 
-  const url = "http://localhost:5000/products";
+
+  const prodURL =  `${url}/products/`
   //useEffect prevents the GET request from happening infinitely
   useEffect(() => {
     axios
-      .get(`${url}/category-and-limit`, {
+      .get(`${prodURL}/category-and-limit`, {
         params: { category: categorySelected, page: 'support' },
       })
       .then((response) => {

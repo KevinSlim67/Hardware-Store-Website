@@ -21,7 +21,7 @@ function Product(props) {
           New
         </span>
       </div>
-      <div className="home-product-image flex justify-center h-[17rem] w-full">
+      <div className="home-product-image flex justify-center h-[17rem] w-[80%]">
         <img
           src={image}
           alt={props.product.description}
