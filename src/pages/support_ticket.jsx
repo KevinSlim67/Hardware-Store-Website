@@ -4,18 +4,19 @@ import { useParams } from "react-router";
 import NavBar from "../components/navbar/navbar";
 import ProductSpecs from "../components/product_buy.jsx/product_specs";
 import SupportTicketForm from "../components/support_ticket.jsx/support_ticket_form";
+import { url } from "../url";
 
 function SupportTicketPage() {
   //gets id that is in the url
   const { id } = useParams();
 
+  const prodURL = `${url}/products`;
   const [data, setData] = useState(null);
 
-  const url = "http://localhost:5000/products";
   //useEffect prevents the GET request from happening infinitely
   //this GET request will return all fields of the given ID
   useEffect(() => {
-    axios.get(`${url}/${id}`).then((response) => {
+    axios.get(`${prodURL}/${id}`).then((response) => {
       setData(response.data);
     });
   }, [id]);
