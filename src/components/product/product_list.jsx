@@ -7,7 +7,7 @@ import ProductsSlider from "../sliders/products_slider";
 function ProductList(props) {
   const [products, setProducts] = useState([]);
 
-  const prodURL =  `${url}/products/`
+  const prodURL = `${url}/products/`;
   //useEffect prevents the GET request from happening infinitely
   useEffect(() => {
     axios
@@ -30,15 +30,17 @@ function ProductList(props) {
         </h3>
 
         <div className="w-full flex justify-center">
-          {products.length !== 0 && (
-            <ProductsSlider
-              list={products}
-              slidesToShow={3}
-              slidesToScroll={1}
-              speed={200}
-              className="product-list"
-            />
-          )}
+          <div className="w-[90%] flex justify-center">
+            {products.length !== 0 && (
+              <ProductsSlider
+                list={products}
+                slidesToShow={3}
+                slidesToScroll={1}
+                speed={200}
+                className="product-list"
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>

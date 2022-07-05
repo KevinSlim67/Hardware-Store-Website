@@ -27,8 +27,8 @@ class ProductsSlider extends Component {
     };
 
     return (
-      <div className={`w-[90%] flex justify-center ${className}`}>
-        <Slider {...settings} className="w-[95%] relative">
+      <div className={`w-full flex justify-center ${className}`}>
+        <Slider {...settings} className="w-full relative">
           {list.map((elem) => (
             <div key={elem._id}>
               <Product product={elem} />
