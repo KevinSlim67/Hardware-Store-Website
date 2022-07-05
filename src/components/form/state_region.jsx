@@ -25,23 +25,24 @@ function StateRegionField(props) {
         State / Region
       </label>
 
-      <select
-        type="text"
-        name="state-province"
-        id="state-province"
-        className="form-input w-full"
-        required={true}
-      >
-        {regions.map((r) => (
-          <option
-            key={`${countryCode}-${r.isoCode}`}
-            value={r.name}
-            onClick={() => handleSelection(r.isoCode)}
-          >
-            {r.name}
-          </option>
-        ))}
-      </select>
+      <div className="form-select w-full">
+        <select
+          type="text"
+          name="state-province"
+          id="state-province"
+          required={true}
+        >
+          {regions.map((r) => (
+            <option
+              key={`${countryCode}-${r.isoCode}`}
+              value={r.name}
+              onClick={() => handleSelection(r.isoCode)}
+            >
+              {r.name}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }

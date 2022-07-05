@@ -1,8 +1,19 @@
 import React from "react";
-const countries = require("./area_code.js");
+import { Country } from "country-state-city";
 
 function PhoneField(props) {
-  let count = 0;
+
+  //gets all countries and returns their name, code, flag and phonecode
+  const countries = [
+    ...Country.getAllCountries().map((c) => {
+      return {
+        name: c.name,
+        isoCode: c.isoCode,
+        flag: c.flag,
+        phonecode: c.phonecode,
+      };
+    }),
+  ];
 
   return (
     <div className="field">
@@ -15,20 +26,17 @@ function PhoneField(props) {
       </label>
 
       <div className="flex w-full ">
-
         <div className="form-select product-area-field mr-3">
-          <select
-            id="area-code"
-            name="area-code"
-            required={true}
-          >
-            {countries.map((country) => (
-              <option key={`code-${count++}`} value={country.dial_code}>
-                {country.flag} {country.dial_code}{" "}
+          <select id="area-code" name="area-code" required={true}>
+            {countries.map((c) => (
+              <option
+              key={`${c.name}-${c.phonecode}`}
+              value={c.phonecode}
+            >
+              {c.flag} {c.phonecode}
               </option>
             ))}
           </select>
-          
         </div>
 
         <input

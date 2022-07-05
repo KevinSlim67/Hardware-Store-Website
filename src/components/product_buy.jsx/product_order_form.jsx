@@ -25,11 +25,11 @@ function ProductOrderForm(props) {
 
           <div className="two-fields">
             <CountryField label={label} className="small-field mr-2" />
-            <StateRegionField label={label} className="small-field mr-2" />
+            <StateRegionField label={label} className="small-field ml-2" />
           </div>
 
           <div className="two-fields">
-            <CityField label={label} className="small-field ml-2" />
+            <CityField label={label} className="small-field mr-2" />
             <PostalZipCodeField label={label} className="small-field ml-2" />
           </div>
 
