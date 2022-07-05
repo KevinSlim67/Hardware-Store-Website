@@ -6,7 +6,7 @@ import CountryField from "../form/country_field";
 import EmailField from "../form/email_field";
 import PhoneField from "../form/phone_field";
 import PostalZipCodeField from "../form/postal_zipcode";
-import StateProvinceField from "../form/state_province";
+import StateRegionField from "../form/state_region";
 
 function ProductOrderForm(props) {
   const label = "text-primary-700 text-[1.3rem] font-semibold";
@@ -25,11 +25,11 @@ function ProductOrderForm(props) {
 
           <div className="two-fields">
             <CountryField label={label} className="small-field mr-2" />
-            <CityField label={label} className="small-field ml-2" />
+            <StateRegionField label={label} className="small-field mr-2" />
           </div>
 
           <div className="two-fields">
-            <StateProvinceField label={label} className="small-field mr-2" />
+            <CityField label={label} className="small-field ml-2" />
             <PostalZipCodeField label={label} className="small-field ml-2" />
           </div>
 

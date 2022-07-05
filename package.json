@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "cities.json": "^1.1.5",
+    "country-state-city": "^3.0.1",
+    "data.js": "^0.12.11",
     "emailjs-com": "^3.2.0",
     "postcss-cli": "^9.1.0",
     "react": "^18.0.0",

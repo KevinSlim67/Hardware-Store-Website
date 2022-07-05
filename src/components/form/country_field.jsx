@@ -1,11 +1,20 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { changeCountry } from "../../features/selectedCountry.js";
-const countries = require("./area_code.js");
+import { changeCountry } from "../../features/selectedLocation.js";
+import { Country } from "country-state-city";
 
 function CountryField(props) {
-  const dispatch = useDispatch();
+  
+  //create an array of all countrie's name, code and flag
+  const countries = [
+    ...Country.getAllCountries().map((c) => {
+      return { name: c.name, isoCode: c.isoCode, flag: c.flag};
+    }),
+  ];
 
+  
+  const dispatch = useDispatch();
+  //changes the global state of country to the value in the parameter
   const handleSelection = (value) => {
     dispatch(changeCountry({ country: value }));
   };
@@ -21,26 +30,19 @@ function CountryField(props) {
       </label>
 
       <div className="form-select w-full">
-        <select
-          id="country"
-          name="country"
-          required={true}
-        >
-          {countries.map((country) => (
+        <select id="country" name="country" required={true}>
+          {countries.map((c) => (
             <option
-              key={country.name}
-              value={country.name}
+              key={c.isoCode}
+              value={c.name}
               className="w-full"
-              onClick={() => {
-                handleSelection(country.name);
-              }}
+              onClick={() => handleSelection(c.isoCode)}
             >
-              {country.flag} {country.name}
+              {c.flag} {c.name}
             </option>
           ))}
         </select>
       </div>
-
     </div>
   );
 }

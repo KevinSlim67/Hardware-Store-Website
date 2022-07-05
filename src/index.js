@@ -7,7 +7,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import notImplementedReducer from './features/notImplemented';
 import latestProductCategory from './features/latestProductCategory';
-import selectedCountry from './features/selectedCountry';
+import selectedLocation from './features/selectedLocation';
 import selectedCategory from './features/selectedCategory';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -17,7 +17,7 @@ const store = configureStore({
   reducer: {
     notImplemented: notImplementedReducer,
     latestProductCategory: latestProductCategory,
-    selectedCountry: selectedCountry,
+    selectedLocation: selectedLocation,
     selectedCategory: selectedCategory,
     mobileNavBar : mobileNavBar
   }
