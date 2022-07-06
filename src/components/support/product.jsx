@@ -9,14 +9,14 @@ function Product(props) {
     <div
       id={`category-${props.category}`}
       className={`support-product flex flex-col justify-center items-center bg-primary-100 m-5 w-[15rem] rounded-[30px]
-     hover:cursor-pointer hover:bg-primary-200 overflow-hidden h-[15rem] ${border}`}
+     hover:cursor-pointer hover:bg-primary-200 overflow-hidden ${border}`}
      onClick={(event) =>
       (window.location.href = `/support/${props.product._id}`)
     }
     >
       <img
         src={props.product.image}
-        className="object-contain p-3 h-full"
+        className="object-contain p-3 h-[12rem]"
         alt={props.product._id}
       />
 
