@@ -42,6 +42,10 @@ body {
   padding-left: 3.5rem;
 }
 
+.search-list > .search-item:last-child hr {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .navbar-content {
     width: 100%;

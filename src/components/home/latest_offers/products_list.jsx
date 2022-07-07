@@ -8,7 +8,7 @@ function ProductsList(props) {
 
   const [products, setProducts] = useState([]);
 
-  const prodURL =  `${url}/products/`
+  const prodURL =  `${url}/products`
   //useEffect prevents the GET request from happening infinitely
   useEffect(() => {
     axios
