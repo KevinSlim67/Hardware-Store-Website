@@ -327,6 +327,12 @@ body {
   margin-top: 0.4rem;
 }
 
+.form-input:focus {
+  outline: solid;
+  outline-width: 1px;
+  outline-color: rgba(157, 146, 255, 0.555);
+}
+
 .form-input .select {
   outline: solid;
   outline-width: 1px;
